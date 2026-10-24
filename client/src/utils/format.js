@@ -32,3 +32,7 @@ export const formatDateTime = (d) =>
 // Today's date as YYYY-MM-DD in Indian time (what <input type="date"> uses)
 export const todayISO = () =>
   new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' });
+
+// Date of an entry as YYYY-MM-DD in Indian time (for <input type="date">)
+export const toDateInput = (d) =>
+  new Date(d).toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' });

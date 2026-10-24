@@ -7,6 +7,8 @@ import Register from './pages/Register';
 import Dashboard from './pages/admin/Dashboard';
 import AddEntry from './pages/admin/AddEntry';
 import MyEntries from './pages/customer/MyEntries';
+import Customers from './pages/admin/Customers';
+
 
 // "/" sends each person to the right place
 function Home() {
@@ -33,6 +35,7 @@ export default function App() {
       >
         <Route index element={<Dashboard />} />
         <Route path="add-entry" element={<AddEntry />} />
+        <Route path="customers" element={<Customers />} />
       </Route>
 
       <Route

@@ -67,6 +67,30 @@ export default function Dashboard() {
       return false;
     }
   };
+  
+  const updateEntry = async (id, payload) => {
+    try {
+      const res = await api.put(`/entries/${id}`, payload);
+      replaceEntry(res.data.entry);
+      return true;
+    } catch (err) {
+      alert(err.response?.data?.message || 'Could not update entry');
+      return false;
+    }
+  };
+
+  const deleteEntry = async (id) => {
+    try {
+      await api.delete(`/entries/${id}`);
+      setData((d) => ({
+        ...d,
+        entries: d.entries.filter((e) => e._id !== id),
+        total: d.total - 1,
+      }));
+    } catch (err) {
+      alert(err.response?.data?.message || 'Could not delete entry');
+    }
+  };
 
   return (
     <div>

@@ -336,3 +336,50 @@ label.check {
 .form-card input {
   margin-bottom: 4px;
 }
+
+/* ---------- Phase 5B ---------- */
+
+.count-badge {
+  display: inline-block;
+  min-width: 20px;
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn-red {
+  background: #b91c1c;
+}
+
+.edit-form {
+  margin-top: 8px;
+}
+
+.edit-form select,
+.edit-form input {
+  margin-bottom: 4px;
+}
+
+.badge.no-login {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.badge.approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge.rejected {
+  background: #fde8e8;
+  color: #9b1c1c;
+}
+
+.entry-top strong {
+  flex: 1;
+}
