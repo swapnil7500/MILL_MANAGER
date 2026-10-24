@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../../api/axios';
 import EntryTable from '../../components/EntryTable';
+import { exportEntriesCsv } from '../../utils/exportCsv';
 import { STATUS_LIST, STATUS_LABELS } from '../../utils/format';
 
 const EMPTY_FILTERS = { status: '', serviceType: '', from: '', to: '', q: '' };
@@ -11,6 +12,7 @@ export default function Dashboard() {
   const [data, setData] = useState({ entries: [], total: 0, pages: 1 });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+    const [exporting, setExporting] = useState(false);
 
   // Reload whenever filters or page change (search typing waits 300 ms)
   useEffect(() => {
@@ -92,6 +94,18 @@ export default function Dashboard() {
     }
   };
 
+    const handleExport = async () => {
+    setExporting(true);
+    try {
+      const count = await exportEntriesCsv(filters);
+      if (count === 0) alert('No entries to export for these filters');
+    } catch (err) {
+      alert(err.response?.data?.message || 'Could not export');
+    } finally {
+      setExporting(false);
+    }
+  };
+
   return (
     <div>
       <h2>Entries</h2>
@@ -150,6 +164,15 @@ export default function Dashboard() {
           }}
         >
           Clear filters
+         <button
+          type="button"
+          className="btn-small btn-green"
+          onClick={handleExport}
+          disabled={exporting}
+        >
+          {exporting ? 'Exporting...' : 'Export to Excel'}
+        </button>
+
         </button>
       </div>
 

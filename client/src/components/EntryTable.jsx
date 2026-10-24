@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import StatusBadge from './StatusBadge';
+import { printSlip } from '../utils/printSlip';
 import {
   STATUS_LIST,
   STATUS_LABELS,
@@ -180,6 +181,13 @@ function EntryCard({ entry, onStatusChange, onAddComment, onUpdate, onDelete }) 
             </button>
             <button type="button" className="btn-small btn-light" onClick={startEdit}>
               Edit
+            </button>
+            <button
+              type="button"
+              className="btn-small btn-light"
+              onClick={() => printSlip(entry)}
+            >
+              Print
             </button>
             <button type="button" className="btn-small btn-red" onClick={handleDelete}>
               Delete
