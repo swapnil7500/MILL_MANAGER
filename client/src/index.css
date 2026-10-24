@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #f4f5f7;
+  color: #1f2933;
+}
+
+.center {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2,
+.page h2 {
+  margin-top: 0;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd2d9;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 18px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #b45309;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.card button[type='submit'] {
+  width: 100%;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.alert.error {
+  background: #fde8e8;
+  color: #9b1c1c;
+}
+
+.alert.success {
+  background: #def7ec;
+  color: #03543f;
+}
+
+a {
+  color: #b45309;
+}
+/* ---------- Phase 5: admin screens ---------- */
+
+input[type='checkbox'] {
+  width: auto;
+}
+
+label.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.topbar nav a {
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.topbar nav a.active {
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand {
+  color: #b45309;
+}
+
+.btn-small {
+  margin-top: 0;
+  padding: 7px 12px;
+  font-size: 0.9rem;
+}
+
+.btn-light {
+  background: #e5e7eb;
+  color: #1f2933;
+}
+
+.btn-green {
+  background: #047857;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tab {
+  margin-top: 0;
+  padding: 7px 14px;
+  background: #e5e7eb;
+  color: #1f2933;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.tab.active {
+  background: #b45309;
+  color: #fff;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+
+.filters > input,
+.filters > select {
+  flex: 1 1 200px;
+  width: auto;
+}
+
+.date-range {
+  display: flex;
+  gap: 10px;
+}
+
+.date-range label {
+  margin: 0;
+  font-weight: 500;
+}
+
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+}
+
+.entry-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.entry-top .badge {
+  margin-left: auto;
+}
+
+.serial {
+  font-weight: 700;
+}
+
+.entry-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 8px;
+}
+
+.entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.entry-actions select {
+  width: auto;
+  padding: 7px 10px;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.in-progress {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge.done {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge.delivered {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.comments {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e4e7eb;
+}
+
+.comments ul {
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+
+.comment-form {
+  display: flex;
+  gap: 8px;
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.form-card {
+  max-width: 460px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h3 {
+  margin: 18px 0 8px;
+}
+
+.form-card h3:first-child {
+  margin-top: 0;
+}
+
+.form-card select,
+.form-card input {
+  margin-bottom: 4px;
+}
