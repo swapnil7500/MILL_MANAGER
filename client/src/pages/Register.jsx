@@ -40,7 +40,7 @@ export default function Register() {
   return (
     <div className="auth-page">
       <form className="card" onSubmit={handleSubmit}>
-        <h2>Register</h2>
+                <img src="/logo.svg" alt="Mill Records" className="logo-img" />
         <p className="muted">The owner will approve your account</p>
 
         {error && <div className="alert error">{error}</div>}

@@ -44,7 +44,10 @@ export default function MyEntries() {
   return (
     <div>
       <header className="topbar">
-        <strong className="brand">Mill Records</strong>
+               <span className="brand-wrap">
+          <img src="/favicon.svg" alt="" className="brand-icon" />
+          <strong className="brand">Gupta Mill</strong>
+        </span>
         <div className="topbar-right" style={{ marginLeft: 'auto' }}>
           <span className="muted">{user.name}</span>
           <button className="btn-small" onClick={logout}>

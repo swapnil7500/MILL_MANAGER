@@ -27,7 +27,7 @@ export default function Login() {
   return (
     <div className="auth-page">
       <form className="card" onSubmit={handleSubmit}>
-        <h2>Mill Records</h2>
+                <img src="/logo.svg" alt="Mill Records" className="logo-img" />
         <p className="muted">Log in to continue</p>
 
         {error && <div className="alert error">{error}</div>}

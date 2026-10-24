@@ -23,7 +23,10 @@ export default function AdminLayout() {
   return (
     <div>
       <header className="topbar">
-        <strong className="brand">Mill Records</strong>
+               <span className="brand-wrap">
+          <img src="/favicon.svg" alt="" className="brand-icon" />
+          <strong className="brand">Gupta Mill</strong>
+        </span>
         <nav>
           <NavLink to="/admin" end>
             Entries
