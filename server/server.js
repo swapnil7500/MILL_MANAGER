@@ -27,7 +27,7 @@ app.use(
     credentials: true,
   })
 );
-
+app.set('trust proxy', Number(process.env.TRUST_PROXY) || 1);
 // Login: only FAILED attempts count, so normal use is never blocked
 const loginLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -41,7 +41,7 @@ const loginLimiter = rateLimit({
 // Register: stops spam sign-up requests
 const registerLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
-  limit: isProd ? 5 : 100,
+  limit: isProd ? 20 : 200,
   standardHeaders: 'draft-7',
   legacyHeaders: false,
   message: { message: 'Too many registration requests. Please try again later.' },
@@ -53,6 +53,9 @@ app.use('/api/auth/register', registerLimiter);
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', time: new Date().toISOString() });
+});
+app.get('/api/debug-ip', (req, res) => {
+  res.json({ ip: req.ip, forwardedFor: req.headers['x-forwarded-for'] || null });
 });
 
 app.use('/api/auth', require('./routes/authRoutes'));

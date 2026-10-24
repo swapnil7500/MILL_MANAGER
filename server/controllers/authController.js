@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const baseCookieOptions = {
   httpOnly: true,
   secure: isProd,
-  sameSite: isProd ? 'none' : 'lax',
+    sameSite: 'lax',
 };
 
 const sendUser = (user) => ({
