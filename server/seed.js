@@ -11,6 +11,7 @@ const run = async () => {
   }
 
   await mongoose.connect(MONGO_URI);
+    console.log('Using database:', mongoose.connection.name);
 
   const existing = await User.findOne({ phone: ADMIN_PHONE });
   if (existing) {
