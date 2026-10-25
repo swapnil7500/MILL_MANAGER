@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+   import Brand from '../components/Brand';
 
 export default function Login() {
   const { login } = useAuth();
@@ -27,7 +28,7 @@ export default function Login() {
   return (
     <div className="auth-page">
       <form className="card" onSubmit={handleSubmit}>
-                <img src="/logo.svg" alt="Mill Records" className="logo-img" />
+                       <Brand />
         <p className="muted">Log in to continue</p>
 
         {error && <div className="alert error">{error}</div>}

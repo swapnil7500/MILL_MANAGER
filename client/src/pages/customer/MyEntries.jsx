@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import api from '../../api/axios';
-import { useAuth } from '../../context/AuthContext';
+import SiteHeader from '../../components/SiteHeader';
+import SiteFooter from '../../components/SiteFooter';
 import StatusBadge from '../../components/StatusBadge';
 import {
   STATUS_LIST,
@@ -11,7 +12,6 @@ import {
 } from '../../utils/format';
 
 export default function MyEntries() {
-  const { user, logout } = useAuth();
   const [entries, setEntries] = useState([]);
   const [filter, setFilter] = useState('');
   const [loading, setLoading] = useState(true);
@@ -42,19 +42,8 @@ export default function MyEntries() {
   const visible = filter ? entries.filter((e) => e.status === filter) : entries;
 
   return (
-    <div>
-      <header className="topbar">
-               <span className="brand-wrap">
-          <img src="/favicon.svg" alt="" className="brand-icon" />
-          <strong className="brand">Gupta Mill</strong>
-        </span>
-        <div className="topbar-right" style={{ marginLeft: 'auto' }}>
-          <span className="muted">{user.name}</span>
-          <button className="btn-small" onClick={logout}>
-            Log out
-          </button>
-        </div>
-      </header>
+    <div className="app-shell">
+      <SiteHeader />
 
       <main className="page">
         <h2>My Entries</h2>
@@ -101,7 +90,7 @@ export default function MyEntries() {
         ) : (
           <div className="entry-list">
             {visible.map((entry) => (
-              <div className="entry-card" key={entry._id}>
+              <div className={`entry-card ${entry.serviceType}`} key={entry._id}>
                 <div className="entry-top">
                   <span className="serial">#{entry.serialNo}</span>
                   <span className="muted">{formatDate(entry.date)}</span>
@@ -130,6 +119,8 @@ export default function MyEntries() {
           </div>
         )}
       </main>
+
+      <SiteFooter />
     </div>
   );
 }

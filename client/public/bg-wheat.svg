@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220">
+  <defs>
+    <g id="ear" fill="#b8860b">
+      <path d="M0 0 V-46" stroke="#b8860b" stroke-width="1.6" fill="none"/>
+      <ellipse cx="0" cy="-58" rx="3.2" ry="7"/>
+      <g id="pair"><ellipse cx="-5" cy="-44" rx="3" ry="6.5" transform="rotate(-32 -5 -44)"/><ellipse cx="5" cy="-44" rx="3" ry="6.5" transform="rotate(32 5 -44)"/></g>
+      <use href="#pair" y="8"/><use href="#pair" y="16"/><use href="#pair" y="24"/><use href="#pair" y="32"/>
+    </g>
+  </defs>
+  <g opacity="0.11">
+    <use href="#ear" transform="translate(58 112) rotate(24)"/>
+    <use href="#ear" transform="translate(160 196) rotate(-28)"/>
+    <use href="#ear" transform="translate(172 92) rotate(18)"/>
+    <use href="#ear" transform="translate(40 206) rotate(-14)"/>
+  </g>
+</svg>

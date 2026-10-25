@@ -1,6 +1,6 @@
 import { SERVICE_LABELS, STATUS_LABELS, formatDate } from './format';
 
-const SHOP_NAME = 'GUPTAA AATTAA CHAKKIIII !! '; // change to the business name
+const SHOP_NAME = 'Gupta Atta Chakki'; // change to the business name
 
 // Customer names are typed by users, so they must be escaped before going into HTML
 const esc = (value) =>

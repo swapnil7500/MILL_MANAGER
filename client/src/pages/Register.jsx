@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Brand from '../components/Brand';
 
 export default function Register() {
   const { register } = useAuth();
@@ -29,6 +30,7 @@ export default function Register() {
     return (
       <div className="auth-page">
         <div className="card">
+          <Brand small />
           <h2>Request sent</h2>
           <div className="alert success">{success}</div>
           <Link to="/login">Back to login</Link>
@@ -40,7 +42,7 @@ export default function Register() {
   return (
     <div className="auth-page">
       <form className="card" onSubmit={handleSubmit}>
-                <img src="/logo.svg" alt="Mill Records" className="logo-img" />
+                <Brand small />
         <p className="muted">The owner will approve your account</p>
 
         {error && <div className="alert error">{error}</div>}

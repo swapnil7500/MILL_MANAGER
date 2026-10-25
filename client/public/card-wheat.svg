@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+  <defs>
+    <g id="pair"><ellipse cx="-6" cy="-52" rx="3.6" ry="8" transform="rotate(-32 -6 -52)"/><ellipse cx="6" cy="-52" rx="3.6" ry="8" transform="rotate(32 6 -52)"/></g>
+  </defs>
+  <g fill="#b8860b" opacity="0.10" transform="translate(88 132) rotate(28)">
+    <path d="M0 0 V-56" stroke="#b8860b" stroke-width="2" fill="none"/>
+    <ellipse cx="0" cy="-68" rx="3.6" ry="8"/>
+    <use href="#pair"/><use href="#pair" y="10"/><use href="#pair" y="20"/><use href="#pair" y="30"/><use href="#pair" y="40"/>
+  </g>
+</svg>

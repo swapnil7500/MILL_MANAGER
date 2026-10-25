@@ -71,7 +71,7 @@ function EntryCard({ entry, onStatusChange, onAddComment, onUpdate, onDelete }) 
   const canMarkDone = entry.status === 'pending' || entry.status === 'in-progress';
 
   return (
-    <div className="entry-card">
+        <div className={`entry-card ${entry.serviceType}`}>
       <div className="entry-top">
         <span className="serial">#{entry.serialNo}</span>
         <span className="muted">{formatDate(entry.date)}</span>

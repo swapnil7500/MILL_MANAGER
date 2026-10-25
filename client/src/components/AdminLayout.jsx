@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import api from '../api/axios';
-import { useAuth } from '../context/AuthContext';
+import SiteHeader from './SiteHeader';
+import SiteFooter from './SiteFooter';
 
 export default function AdminLayout() {
-  const { user, logout } = useAuth();
   const [pendingCount, setPendingCount] = useState(0);
 
   const refreshPending = useCallback(async () => {
@@ -20,34 +20,26 @@ export default function AdminLayout() {
     refreshPending();
   }, [refreshPending]);
 
-  return (
-    <div>
-      <header className="topbar">
-               <span className="brand-wrap">
-          <img src="/favicon.svg" alt="" className="brand-icon" />
-          <strong className="brand">Gupta Mill</strong>
-        </span>
-        <nav>
-          <NavLink to="/admin" end>
-            Entries
-          </NavLink>
-          <NavLink to="/admin/add-entry">Add Entry</NavLink>
-          <NavLink to="/admin/customers">
-            Customers
-            {pendingCount > 0 && <span className="count-badge">{pendingCount}</span>}
-          </NavLink>
-        </nav>
-        <div className="topbar-right">
-          <span className="muted">{user.name}</span>
-          <button className="btn-small" onClick={logout}>
-            Log out
-          </button>
-        </div>
-      </header>
+  const nav = (
+    <>
+      <NavLink to="/admin" end>
+        Entries
+      </NavLink>
+      <NavLink to="/admin/add-entry">Add Entry</NavLink>
+      <NavLink to="/admin/customers">
+        Customers
+        {pendingCount > 0 && <span className="count-badge">{pendingCount}</span>}
+      </NavLink>
+    </>
+  );
 
+  return (
+    <div className="app-shell">
+      <SiteHeader nav={nav} />
       <main className="page">
         <Outlet context={{ refreshPending }} />
       </main>
+      <SiteFooter />
     </div>
   );
 }
