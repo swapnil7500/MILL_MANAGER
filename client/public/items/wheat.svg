@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 160" width="160" height="160">
+  <circle cx="80" cy="80" r="76" fill="#fbe9b7" stroke="#e0b13c" stroke-width="2"/>
+<defs><g id="ear"><path d="M0 0 V-40" stroke="#a9780f" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+<g fill="#e3b53f" stroke="#a9780f" stroke-width="1"><ellipse cx="-6.5" cy="-40" rx="4.2" ry="8.5" transform="rotate(-28 -6.5 -40)"/><ellipse cx="6.5" cy="-40" rx="4.2" ry="8.5" transform="rotate(28 6.5 -40)"/><ellipse cx="-6.5" cy="-50" rx="4.2" ry="8.5" transform="rotate(-28 -6.5 -50)"/><ellipse cx="6.5" cy="-50" rx="4.2" ry="8.5" transform="rotate(28 6.5 -50)"/><ellipse cx="-6.5" cy="-60" rx="4.2" ry="8.5" transform="rotate(-28 -6.5 -60)"/><ellipse cx="6.5" cy="-60" rx="4.2" ry="8.5" transform="rotate(28 6.5 -60)"/><ellipse cx="-6.5" cy="-70" rx="4.2" ry="8.5" transform="rotate(-28 -6.5 -70)"/><ellipse cx="6.5" cy="-70" rx="4.2" ry="8.5" transform="rotate(28 6.5 -70)"/><ellipse cx="-6.5" cy="-80" rx="4.2" ry="8.5" transform="rotate(-28 -6.5 -80)"/><ellipse cx="6.5" cy="-80" rx="4.2" ry="8.5" transform="rotate(28 6.5 -80)"/><ellipse cx="0" cy="-94" rx="4" ry="9"/></g>
+<g stroke="#b98a1c" stroke-width="1" fill="none" stroke-linecap="round" opacity=".7"><path d="M-8 -82 L-17.6 -108"/><path d="M-4 -90 L-8.8 -116"/><path d="M4 -90 L8.8 -116"/><path d="M8 -82 L17.6 -108"/><path d="M0 -96 L0.0 -122"/></g></g></defs>
+  <use href="#ear" xlink:href="#ear" transform="translate(58 136) rotate(-20) scale(.82)"/>
+  <use href="#ear" xlink:href="#ear" transform="translate(102 136) rotate(20) scale(.82)"/>
+  <use href="#ear" xlink:href="#ear" transform="translate(80 140) scale(.9)"/>
+</svg>

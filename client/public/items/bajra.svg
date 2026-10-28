@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 160" width="160" height="160">
+  <circle cx="80" cy="80" r="76" fill="#e9ecdc" stroke="#a8b384" stroke-width="2"/>
+<g transform="translate(56 98) rotate(-8) scale(0.95)">
+<path d="M0 0 V56" stroke="#7c8a4f" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M0 44 C-28 38 -42 14 -46 -8 C-26 6 -8 24 0 44Z" fill="#86a65f" stroke="#5f7d3e" stroke-width="1"/>
+<path d="M-14 -2 C-17 -34 -12 -66 0 -70 C12 -66 17 -34 14 -2 Z" fill="#a99f74" stroke="#7a7050" stroke-width="1.4"/>
+<g fill="#cfc79d" stroke="#8a8058" stroke-width=".8"><circle cx="-8" cy="-6" r="3" /><circle cx="0" cy="-6" r="3" /><circle cx="8" cy="-6" r="3" /><circle cx="-4" cy="-14" r="3" /><circle cx="4" cy="-14" r="3" /><circle cx="-8" cy="-22" r="3" /><circle cx="0" cy="-22" r="3" /><circle cx="8" cy="-22" r="3" /><circle cx="-4" cy="-30" r="3" /><circle cx="4" cy="-30" r="3" /><circle cx="-8" cy="-38" r="3" /><circle cx="0" cy="-38" r="3" /><circle cx="8" cy="-38" r="3" /><circle cx="-4" cy="-46" r="3" /><circle cx="4" cy="-46" r="3" /><circle cx="-8" cy="-54" r="3" /><circle cx="0" cy="-54" r="3" /><circle cx="8" cy="-54" r="3" /><circle cx="0" cy="-62" r="3"/></g></g><g transform="translate(106 96) rotate(10) scale(0.9)">
+<path d="M0 0 V56" stroke="#7c8a4f" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M0 44 C-28 38 -42 14 -46 -8 C-26 6 -8 24 0 44Z" fill="#86a65f" stroke="#5f7d3e" stroke-width="1"/>
+<path d="M-14 -2 C-17 -34 -12 -66 0 -70 C12 -66 17 -34 14 -2 Z" fill="#a99f74" stroke="#7a7050" stroke-width="1.4"/>
+<g fill="#cfc79d" stroke="#8a8058" stroke-width=".8"><circle cx="-8" cy="-6" r="3" /><circle cx="0" cy="-6" r="3" /><circle cx="8" cy="-6" r="3" /><circle cx="-4" cy="-14" r="3" /><circle cx="4" cy="-14" r="3" /><circle cx="-8" cy="-22" r="3" /><circle cx="0" cy="-22" r="3" /><circle cx="8" cy="-22" r="3" /><circle cx="-4" cy="-30" r="3" /><circle cx="4" cy="-30" r="3" /><circle cx="-8" cy="-38" r="3" /><circle cx="0" cy="-38" r="3" /><circle cx="8" cy="-38" r="3" /><circle cx="-4" cy="-46" r="3" /><circle cx="4" cy="-46" r="3" /><circle cx="-8" cy="-54" r="3" /><circle cx="0" cy="-54" r="3" /><circle cx="8" cy="-54" r="3" /><circle cx="0" cy="-62" r="3"/></g></g>
+</svg>

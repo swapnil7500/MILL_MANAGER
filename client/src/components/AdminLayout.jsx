@@ -22,6 +22,7 @@ export default function AdminLayout() {
 
   const nav = (
     <>
+       <NavLink to="/admin/about">About Us</NavLink>
       <NavLink to="/admin" end>
         Entries
       </NavLink>
@@ -30,6 +31,7 @@ export default function AdminLayout() {
         Customers
         {pendingCount > 0 && <span className="count-badge">{pendingCount}</span>}
       </NavLink>
+         
     </>
   );
 

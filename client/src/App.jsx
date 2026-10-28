@@ -6,9 +6,10 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/admin/Dashboard';
 import AddEntry from './pages/admin/AddEntry';
-import MyEntries from './pages/customer/MyEntries';
 import Customers from './pages/admin/Customers';
-
+import About from './pages/About';
+import MyEntries from './pages/customer/MyEntries';
+import CustomerAbout from './pages/customer/CustomerAbout';
 
 // "/" sends each person to the right place
 function Home() {
@@ -36,6 +37,7 @@ export default function App() {
         <Route index element={<Dashboard />} />
         <Route path="add-entry" element={<AddEntry />} />
         <Route path="customers" element={<Customers />} />
+        <Route path="about" element={<About />} />
       </Route>
 
       <Route
@@ -43,6 +45,14 @@ export default function App() {
         element={
           <ProtectedRoute role="customer">
             <MyEntries />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/about"
+        element={
+          <ProtectedRoute role="customer">
+            <CustomerAbout />
           </ProtectedRoute>
         }
       />
